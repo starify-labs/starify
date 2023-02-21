@@ -1,0 +1,12 @@
+syntax = "proto3";
+package starifylabs.starify.starify;
+
+import "gogoproto/gogo.proto";
+import "starify/starify/params.proto";
+
+option go_package = "github.com/starify-labs/starify/x/starify/types";
+
+// GenesisState defines the starify module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
